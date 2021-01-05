@@ -19,6 +19,7 @@ RUN apk add --update \
         python3 \
         python3-dev \
         tar \
+    && apk --no-cache add gcc libc-dev libxml2-dev libxslt-dev \
     && python3 -m ensurepip \
     && pip3 install --upgrade pip setuptools \
     && mkdir -p /etc/cert-issuer/data/unsigned_certificates \
